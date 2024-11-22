@@ -1,4 +1,4 @@
-# Monitoramento de Dispositivos e Otimização de Consumo de Energia
+# Monitoramento de Dispositivos e Otimização do Consumo de Energia
 
 ## Descrição do Projeto
 
