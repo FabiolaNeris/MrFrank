@@ -41,7 +41,7 @@ O design do aplicativo foi inicialmente projetado no **Figma** para fornecer uma
 ### Passos para Build
 1. Clone o repositório:
    ```bash
-   git clone https://github.com/usuario/projeto-monitoramento-dispositivos.git
+   git clone https://github.com/FabiolaNeris/MrFrank.git
 2. Abra o projeto no Android Studio.
 
 3. Configure o Firebase no projeto:
