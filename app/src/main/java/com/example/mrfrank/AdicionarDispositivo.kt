@@ -40,6 +40,10 @@ class AdicionarDispositivo : AppCompatActivity() {
             }
         }
 
+        binding.buttonCancelar.setOnClickListener{
+            finish()
+        }
+
     }
 
     private fun salvarDispositivo(nome: String, descricao: String, marca: String, voltagem:String, tempoUso:String){

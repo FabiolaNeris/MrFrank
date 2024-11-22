@@ -9,6 +9,7 @@ import androidx.core.view.WindowInsetsCompat
 import com.example.mrfrank.databinding.ActivityAdicionarDispositivoBinding
 import com.example.mrfrank.databinding.ActivityEditarDispositivoBinding
 import com.google.firebase.firestore.FirebaseFirestore
+import com.google.firebase.firestore.SetOptions
 import kotlinx.coroutines.handleCoroutineException
 
 class EditarDispositivo : AppCompatActivity() {
@@ -90,7 +91,7 @@ class EditarDispositivo : AppCompatActivity() {
             .document("sala_de_estar")
             .collection("dispositivos")
             .document(dispositivoId)
-            .set(dispositivoDados)
+            .set(dispositivoDados, SetOptions.merge())
             .addOnSuccessListener { Toast.makeText(this, "Dispositivo atualizado com sucesso", Toast.LENGTH_SHORT).show()
                 finish() }
             .addOnFailureListener{ exception ->
