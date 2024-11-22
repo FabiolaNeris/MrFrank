@@ -30,6 +30,10 @@ class MainActivity : AppCompatActivity() {
             createUser()
         }
 
+        binding.textEsqueceuSenha.setOnClickListener{
+            forgetPassword()
+        }
+
     }
 
     private fun createUser(){
@@ -60,6 +64,26 @@ class MainActivity : AppCompatActivity() {
                 }
             }
 
+    }
+
+    private fun forgetPassword(){
+        val email = binding.textEmail.text.toString()
+
+        if(email.isEmpty()){
+            Toast.makeText(this, "Digite seu email para recuperar a senha",
+                Toast.LENGTH_SHORT).show()
+        }
+
+        auth.sendPasswordResetEmail(email)
+            .addOnCompleteListener{task ->
+                if(task.isSuccessful){
+                    Toast.makeText(this, "Email de recuperação enviado",
+                        Toast.LENGTH_SHORT).show()
+                } else {
+                    Toast.makeText(this, "Erro ao enviar email de recuperação: ${task.exception?.message}",
+                        Toast.LENGTH_SHORT).show()
+                }
+            }
     }
 
     private fun isValidEmail(email: String):Boolean{
