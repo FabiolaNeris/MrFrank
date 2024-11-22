@@ -43,10 +43,12 @@ class MainActivity : AppCompatActivity() {
 
         if(email.isEmpty() || senha.isEmpty()){
             Toast.makeText(this, "Preencha todos os campos", Toast.LENGTH_SHORT).show()
+            return
         }
 
         if(!isValidEmail(email)){
             Toast.makeText(this, "Email invalido", Toast.LENGTH_SHORT).show()
+            return
         }
 
         auth.createUserWithEmailAndPassword(email,senha)
