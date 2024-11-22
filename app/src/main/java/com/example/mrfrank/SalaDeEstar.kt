@@ -117,7 +117,7 @@ class SalaDeEstar : AppCompatActivity() {
         val dispositivos = mutableListOf<String>()
         val dispositivosId = mutableListOf<String>()
 
-        // Preencher os dispositivos e ids
+
         db.collection("comodos")
             .document("sala_de_estar")
             .collection("dispositivos")
@@ -126,15 +126,15 @@ class SalaDeEstar : AppCompatActivity() {
                 for (document in result) {
                     val nome = document.getString("nome")
                     dispositivos.add(nome ?: "Desconhecido")
-                    dispositivosId.add(document.id)  // Armazenando o ID do dispositivo
+                    dispositivosId.add(document.id)
                 }
 
-                // Criar o AlertDialog com os dispositivos
+
                 val builder = AlertDialog.Builder(this)
                 builder.setTitle("Escolha um dispositivo para editar")
                 builder.setItems(dispositivos.toTypedArray()) { _, which ->
                     val dispositivoId = dispositivosId[which]
-                    // Passar o ID do dispositivo para a tela de edição
+
                     val intent = Intent(this, EditarDispositivo::class.java)
                     intent.putExtra("dispositivoId", dispositivoId)
                     startActivity(intent)
@@ -150,7 +150,7 @@ class SalaDeEstar : AppCompatActivity() {
         val dispositivos = mutableListOf<String>()
         val dispositivosId = mutableListOf<String>()
 
-        // Preencher os dispositivos e ids
+
         db.collection("comodos")
             .document("sala_de_estar")
             .collection("dispositivos")
@@ -162,12 +162,12 @@ class SalaDeEstar : AppCompatActivity() {
                     dispositivosId.add(document.id)  // Armazenando o ID do dispositivo
                 }
 
-                // Criar o AlertDialog com os dispositivos
+
                 val builder = AlertDialog.Builder(this)
                 builder.setTitle("Escolha um dispositivo para remover")
                 builder.setItems(dispositivos.toTypedArray()) { _, which ->
                     val dispositivoId = dispositivosId[which]
-                    // Confirmar remoção
+
                     AlertDialog.Builder(this)
                         .setMessage("Tem certeza que deseja remover este dispositivo?")
                         .setPositiveButton("Sim") { _, _ ->
