@@ -27,7 +27,7 @@ class MainActivity : AppCompatActivity() {
 
 
         binding.btnLogin.setOnClickListener{
-            createUser()
+            checkUserExists()
         }
 
         binding.textEsqueceuSenha.setOnClickListener{
@@ -36,7 +36,7 @@ class MainActivity : AppCompatActivity() {
 
     }
 
-    private fun createUser(){
+    private fun checkUserExists(){
 
         val email = binding.textEmail.text.toString()
         val senha = binding.textSenha.text.toString()
@@ -51,21 +51,39 @@ class MainActivity : AppCompatActivity() {
             return
         }
 
-        auth.createUserWithEmailAndPassword(email,senha)
+        auth.signInWithEmailAndPassword(email, senha)
             .addOnCompleteListener(this){task ->
                 if(task.isSuccessful){
-                    Toast.makeText(this, "Cadastro realizado com sucesso",
-                        Toast.LENGTH_SHORT).show()
-
-                    val intent = Intent(this, HomePage::class.java)
-                    startActivity(intent)
-                    finish()
+                    Toast.makeText(this, "Usuário existente", Toast.LENGTH_SHORT).show()
+                    navigateToHome()
                 }else{
-                    Toast.makeText(this, "Erro: ${task.exception?.message}",
-                        Toast.LENGTH_SHORT).show()
+                    if (task.exception?.message?.contains("There is no user record corresponding to this identifier") == true){
+                        createUser(email,senha)
+                    } else {
+                        Toast.makeText(this, "Erro ao tentar fazer login: ${task.exception?.message}", Toast.LENGTH_SHORT).show()
+                    }
+
                 }
             }
 
+    }
+
+    private fun createUser(email: String, senha: String){
+        auth.createUserWithEmailAndPassword(email, senha)
+            .addOnCompleteListener(this) { task ->
+                if (task.isSuccessful) {
+                    Toast.makeText(this, "Cadastro realizado com sucesso", Toast.LENGTH_SHORT).show()
+                    navigateToHome()
+                } else {
+                    Toast.makeText(this, "Erro ao criar o usuário: ${task.exception?.message}", Toast.LENGTH_SHORT).show()
+                }
+            }
+    }
+
+    private fun navigateToHome(){
+        val intent = Intent(this, HomePage::class.java)
+        startActivity(intent)
+        finish()
     }
 
     private fun forgetPassword(){
