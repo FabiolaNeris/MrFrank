@@ -59,9 +59,9 @@ O design do aplicativo foi inicialmente projetado no **Figma** para fornecer uma
 9. Execute o aplicativo no dispositivo ou emulador Android.
 
 ## Integrantes do projeto
-* Fabiola **RM** 552715 **TURMA** 1TDSPB
+* Fabiola **RM** 552715 **TURMA** 2TDSPB
 
-* Rafael **RM** 00000 **TURMA** 1TDSPB
+* Rafael **RM** 553934 **TURMA** 2TDSPB
 
-* Carlos **RM** 00000 **TURMA** 1TDSPB
+* Carlos **RM** 553597 **TURMA** 2TDSZ
  
