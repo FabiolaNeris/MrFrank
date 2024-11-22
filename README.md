@@ -29,7 +29,7 @@ Os dados dos dispositivos (como descrição, marca e voltagem) são armazenados 
 
 O design do aplicativo foi inicialmente projetado no **Figma** para fornecer uma visão clara e intuitiva da interface do usuário. O protótipo inclui telas de inserção, edição e visualização dos dispositivos conectados, com foco na simplicidade e usabilidade. Você pode visualizar o protótipo completo através do link abaixo:
 
-[Visualizar Protótipo no Figma]([https://www.figma.com/proto/XXXXXXXXXXXXXX](https://www.figma.com/design/ABYTiaEOOxR7MyrpSGWMdx/Mr.Frank---energia?node-id=0-1&t=XoZzG0PQHg4okuSE-1))
+[Visualizar Protótipo no Figma](https://www.figma.com/design/ABYTiaEOOxR7MyrpSGWMdx/Mr.Frank---energia?node-id=0-1&t=XoZzG0PQHg4okuSE-1)
 
 ## Instruções de Build e Execução
 
