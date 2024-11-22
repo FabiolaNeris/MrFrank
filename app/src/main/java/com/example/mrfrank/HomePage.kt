@@ -24,5 +24,13 @@ class HomePage : AppCompatActivity() {
             startActivity(intent)
             finish()
         }
+
+
+        binding.imgSala.setOnClickListener{
+
+            val intent = Intent(this, SalaDeEstar::class.java)
+            startActivity(intent)
+            finish()
+        }
     }
 }
