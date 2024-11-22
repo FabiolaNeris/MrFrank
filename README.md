@@ -31,6 +31,10 @@ O design do aplicativo foi inicialmente projetado no **Figma** para fornecer uma
 
 [Visualizar Protótipo no Figma](https://www.figma.com/design/ABYTiaEOOxR7MyrpSGWMdx/Mr.Frank---energia?node-id=0-1&t=XoZzG0PQHg4okuSE-1)
 
+## Pitch e Video da Solução
+
+[Video Pitch da Solução](https://youtu.be/-amW7e8CQAc)
+
 ## Instruções de Build e Execução
 
 ### Requisitos
