@@ -13,6 +13,12 @@
         android:theme="@style/Theme.MrFrank"
         tools:targetApi="31">
         <activity
+            android:name=".EditarDispositivo"
+            android:exported="false" />
+        <activity
+            android:name=".AdicionarDispositivo"
+            android:exported="false" />
+        <activity
             android:name=".SalaDeEstar"
             android:exported="false" />
         <activity

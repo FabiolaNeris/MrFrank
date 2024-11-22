@@ -6,14 +6,11 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.mrfrank.databinding.ListItemDispositivosBinding
 import com.example.mrfrank.model.Dispositivo
+import com.google.firebase.database.collection.LLRBNode.Color
 
 class DispositivoAdapter(private val dispositivos: List<Dispositivo>):
     RecyclerView.Adapter<DispositivoAdapter.DispositivoViewHolder>(){
 
-//    class DispositivoViewHolder(itemView: ListItemDispositivosBinding) : RecyclerView.ViewHolder(itemView){
-//        val nome: TextView = itemView.findViewById(R.id.textNomeDispositivo)
-//        val tempoMedioUso: TextView = itemView.findViewById(R.id.textTempoMedioUso)
-//    }
 
     override fun onCreateViewHolder(
         parent: ViewGroup,
@@ -26,6 +23,7 @@ class DispositivoAdapter(private val dispositivos: List<Dispositivo>):
     override fun onBindViewHolder(holder: DispositivoViewHolder, position: Int) {
         val dispositivo = dispositivos[position]
         holder.bind(dispositivo)
+
     }
 
     override fun getItemCount(): Int = dispositivos.size
