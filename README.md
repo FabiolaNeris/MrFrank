@@ -63,5 +63,5 @@ O design do aplicativo foi inicialmente projetado no **Figma** para fornecer uma
 
 * Rafael **RM** 553934 **TURMA** 2TDSPB
 
-* Carlos **RM** 553597 **TURMA** 2TDSZ
+* Carlos **RM** 553597 **TURMA** 2TDSPR
  
